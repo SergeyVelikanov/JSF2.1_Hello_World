@@ -4,6 +4,7 @@
 package com.jsf;
 
 /**
+<<<<<<< HEAD
  * @author Sergio
  *
  */
