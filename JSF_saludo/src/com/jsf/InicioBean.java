@@ -4,7 +4,6 @@
 package com.jsf;
 
 /**
- * @author  Sergio
  *
  */
 public class InicioBean{
