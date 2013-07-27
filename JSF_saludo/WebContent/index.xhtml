@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title><f:loadBundle var="i18n" basename="es_ES"></f:loadBundle>#{i18n.home}</title>
+</h:head>
+<h:body>
+	<h1>
+		<h:outputText value="#{i18n.wellcome}" />
+	</h1>
+	<br />
+
+	<h:form>
+		<h:panelGrid id="panel1" columns="3">
+			<h:outputText id="nombreOut" value="#{i18n.name}" />
+			<h:inputText id="nombre" value="#{inicioBean.nombre}" maxlength="35" required="true"
+				requiredMessage="#{i18n.name_field_error}">
+				<f:validateRegex pattern="([a-zA-Z]+)" />
+			</h:inputText>
+			<h:message for="nombre" style="color:red" />
+
+			<h:outputText id="edadOut" value="#{i18n.age}" />
+			<h:inputText id="edad" value="#{inicioBean.edad }" required="true" requiredMessage="#{i18n.age_field_error}">
+				<f:validateLongRange minimum="18" maximum="70" />
+			</h:inputText>
+			<h:message for="edad" style="color:red" />
+			<h:commandButton action="saludo" value="#{i18n.next}" />
+		</h:panelGrid>
+	</h:form>
+
+</h:body>
+</html>
