@@ -1,0 +1,4 @@
+Java EE JSF2.1 Hello_World
+==================
+Simple Hola Mundo con JSF 2.1, con validaciones e 18n.
+Librerias requeridas: MyFaces o Mojarra y JSTL. 
